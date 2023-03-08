@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebCocktailBar.Data;
 using WebCocktailBar.Domain;
+using WebCocktailBar.Infrastructure;
 
 namespace WebCocktailBar
 {
@@ -62,6 +63,7 @@ namespace WebCocktailBar
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.PrepareDatabase();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
