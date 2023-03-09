@@ -11,9 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebCocktailBar.Abstraction;
 using WebCocktailBar.Data;
 using WebCocktailBar.Domain;
 using WebCocktailBar.Infrastructure;
+using WebCocktailBar.Services;
 
 namespace WebCocktailBar
 {
@@ -47,6 +49,9 @@ namespace WebCocktailBar
                 .AddDefaultTokenProviders();
             services.AddControllersWithViews();
 
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<ITasteService, TasteService>();
             services.AddRazorPages();
             services.Configure<IdentityOptions>(option =>
             {
