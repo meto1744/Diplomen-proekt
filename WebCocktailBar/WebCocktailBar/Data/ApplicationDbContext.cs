@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebCocktailBar.Domain;
+using WebCocktailBar.Models.Product;
+using WebShopDemo.Models.Product;
 
 namespace WebCocktailBar.Data
 {
@@ -22,5 +24,15 @@ namespace WebCocktailBar.Data
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Order> Orders { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Product.ProductCreateVM> ProductCreateVM { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Product.ProductIndexVM> ProductIndexVM { get; set; }
+
+        public DbSet<WebShopDemo.Models.Product.ProductEditVM> ProductEditVM { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Product.ProductDetailsVM> ProductDetailsVM { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Product.ProductDeleteVM> ProductDeleteVM { get; set; }
     }
 }
