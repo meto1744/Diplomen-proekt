@@ -6,6 +6,8 @@ using System.Text;
 using WebCocktailBar.Domain;
 using WebCocktailBar.Models.Product;
 using WebShopDemo.Models.Product;
+using WebCocktailBar.Models.Order;
+using WebCocktailBar.Models.Client;
 
 namespace WebCocktailBar.Data
 {
@@ -34,5 +36,13 @@ namespace WebCocktailBar.Data
         public DbSet<WebCocktailBar.Models.Product.ProductDetailsVM> ProductDetailsVM { get; set; }
 
         public DbSet<WebCocktailBar.Models.Product.ProductDeleteVM> ProductDeleteVM { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Order.OrderIndexVM> OrderIndexVM { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Order.OrderConfirmVM> OrderConfirmVM { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Client.ClientIndexVM> ClientIndexVM { get; set; }
+
+        public DbSet<WebCocktailBar.Models.Client.ClientDeleteVM> ClientDeleteVM { get; set; }
     }
 }

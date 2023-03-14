@@ -52,6 +52,7 @@ namespace WebCocktailBar
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<ITasteService, TasteService>();
+            services.AddTransient<IStatisticsService, StatisticsService>();
             services.AddRazorPages();
             services.Configure<IdentityOptions>(option =>
             {

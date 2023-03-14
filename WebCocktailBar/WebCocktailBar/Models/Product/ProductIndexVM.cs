@@ -18,7 +18,7 @@ namespace WebCocktailBar.Models.Product
         [Display(Name = "Category")]
         public string CategoryName { get; set; }
 
-        [Display(Name = "MethodOfPrep")]
+        [Display(Name = "MethOfPrep")]
 
         public string MethodOfPreparation { get; set; }
 
